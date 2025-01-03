@@ -68,13 +68,3 @@ def create_text_collection(dataset_name, dataset, text):
     }
     result = requests.post(url=text_collection_url, json=data, headers=headers)
     # print(result.json())
-
-
-if __name__ == '__main__':
-    dataset_dict = query_dataset()
-    dataset_name = r'舆情知识库实时'
-    if dataset_name not in dataset_dict:
-        create_dataset(dataset_name)
-    print(dataset_dict[dataset_name])
-    create_text_collection(dataset_name, dataset_dict[dataset_name], "67868768768787")
-    # print(dataset_dict)
